@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1>Hello, welcome to lips CHANEL !</h1>
+<p>Here are the details of your interested product...</p>
+<p>Your chosen product has average rating of {{prod_detail[5]}}</p>
+<p>Category: {{prod_detail[1]}}</p>
+<p>Product Name: {{prod_detail[2]}}</p>
+<p>Price: {{prod_detail[3]}}</p>
+<p>Number of Shades: {{prod_detail[4]}}</p>
+<h2>Description</h2>
+<p> {{prod_detail[6]}}</p>
+<h2>Pictures</h2>
+<table>
+    <tr>
+        <th width="600">Picture One</th>
+        {% if prod_detail[8] != 'Null' %}
+        <th width="600">Picture Two</th>
+        {% endif %}
+    </tr>
+    <tr>
+       <td><img src={{prod_detail[7]}} height="500" width="400"></td>
+        {% if prod_detail[8] != 'Null' %}
+       <td><img src={{prod_detail[8]}} height="500" width="400"></td>
+        {% endif %}
+    </tr>
+</table>
+<h2><a href={{review_url}}>See Reviews</a></h2>
+</body>
+</html>

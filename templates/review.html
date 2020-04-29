@@ -1,0 +1,23 @@
+<html>
+<head>
+    <style>table, th, td {border: 1px solid black;}</style>
+</head>
+<body>
+<h1>Reviews of {{ProductName[0]}}</h1>
+<table style="width:80%">
+
+    <tr>
+        <th width="400">Reviews</th>
+        <th width="100">Rating</th>
+        <th width="100">Date</th>
+    </tr>
+    {% for review in review_info %}
+    <tr>
+       <td><p>{{review[0]}}</p></td>
+       <td><p>{{review[1]}}</p></td>
+        <td><p>{{review[2]}}</p></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
